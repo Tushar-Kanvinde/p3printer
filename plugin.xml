@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<plugin id="cordova-plugin-p3printer"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="0.0.1">    
+    <name>P3 Printer</name>
+
+    <description>Prints image to P3 printer</description>
+
+    <repo>https://github.com/Tushar-Kanvinde/p3printer.git</repo>
+
+    <keywords>appplant, printer, cordova</keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Tushar Kanvinde</author>
+    <engines>
+        <engine name="cordova" version=">=11.0.0" />
+        <engine name="android-sdk" version=">=31" />
+    </engines>
+    <!-- interface -->
+    <js-module src="www/printer.js" name="Printer">
+        <clobbers target="cordova.plugins.p3printer" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Printer">
+                <param name="android-package" value="in.rtac.p3printer.Printer"/>
+            </feature>            
+        </config-file>
+    </platform>
+    <preference name="ANDROID_SUPPORT_V4_VERSION" default="28.+"/>
+
+    <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+    <source-file src="src/android/PrintAdapter.java"
+                     target-dir="src/in/rtac/p3printer/printer" />
+
+
+</plugin>
+

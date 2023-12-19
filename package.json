@@ -1,0 +1,38 @@
+{
+  "name": "p3printer",
+  "version": "0.0.1",
+  "description": "Prints images",
+  "cordova": {
+    "id": "p3printer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tushar-Kanvinde/p3printer.git"
+  },
+  "keywords": [
+    "printer",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=11.0.0"
+    },
+    {
+      "name": "android-sdk",
+      "version": ">=31"
+    }
+  ],
+  "author": "Tushar Kanvinde",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Tushar-Kanvinde/issues"
+  },
+  "homepage": "https://github.com/Tushar-Kanvinde/#readme",
+  "dependencies": {}
+}
